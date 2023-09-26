@@ -7,6 +7,7 @@ namespace :dev do
         show_spinner("criando banco de dados...") {%x(rails db:create)}
         show_spinner("migrando banco de dados...") {%x(rails db:migrate)}
         show_spinner("Populando banco de dados...") {%x(rails dev:add_coins)}
+        show_spinner("Cadastrando tipos de moedas...") {%x(rails dev:add_mining_types)}
       else 
         puts "você não esta em ambiente de desenvolvimento!"
       end
@@ -31,6 +32,20 @@ namespace :dev do
           ]
       coins.each do |coin|
           Coin.find_or_create_by!(coin)
+      end
+    end
+  end
+
+  desc "Casdastra os tipos de mineração"
+  task add_mining_types: :environment do
+    show_spinner("Casdastrando tipos de moedas...") do
+        minging_types = [
+          {description: "Proof of Work",acronym: "PoW"},
+          {description: "Proof of State",acronym: "PoS"},
+          {description: "Proof of Capacity",acronym: "PoC"}
+        ]
+        minging_types.each do |minging_type|
+          MiningType.find_or_create_by!(minging_type)
       end
     end
   end
