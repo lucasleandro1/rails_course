@@ -8,19 +8,19 @@
 # comando para recriar o banco de dados: rails db:drop db:create db:migrate db:seed
 puts "Cadastrando moedas"
 Coin.create!(
-    description: "Bitcoin",
+    [
+    {description: "Bitcoin",
     acronym: "BTC",
-    url_image:"https://static.vecteezy.com/system/resources/previews/008/822/064/original/3d-design-bitcoin-cryptocurrency-white-background-free-png.png"
-)
-Coin.create!(
-    description: "Ethereum",
+    url_image:"https://static.vecteezy.com/system/resources/previews/008/822/064/original/3d-design-bitcoin-cryptocurrency-white-background-free-png.png"},
+    
+    {description: "Ethereum",
     acronym: "ETC",
-    url_image:"https://upload.wikimedia.org/wikipedia/commons/b/b7/ETHEREUM-YOUTUBE-PROFILE-PIC.png"
-)
-Coin.create!(
-    description: "Dash",
+    url_image:"https://upload.wikimedia.org/wikipedia/commons/b/b7/ETHEREUM-YOUTUBE-PROFILE-PIC.png"},
+    
+    {description: "Dash",
     acronym: "DASH",
-    url_image:"https://www.pngall.com/wp-content/uploads/10/Dash-Crypto-Logo-PNG-Cutout.png"
+    url_image:"https://www.pngall.com/wp-content/uploads/10/Dash-Crypto-Logo-PNG-Cutout.png"}
+    ]
 )
 
 puts "Moedas cadastradas com sucesso"
