@@ -2,14 +2,30 @@
 
 <h1>Moedas 🪙</h1>
 
+
 <div id="coins">
-  <% @coins.each do |coin| %>
-    <%= render coin %>
-    <p>
-      <%= link_to "Show ", coin %>
-    </p>
-  <% end %>
+<table>
+  <thead>
+    <tr>
+      <th>description</th>
+      <th>acronym</th>
+      <th>url image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @coins.each do |coin| %>
+      <tr>
+        <td><%= coin.description %></td>
+        <td><%= coin.acronym %></td>
+        <td><%= image_tag coin.url_image, width:25, height:25 %></td>
+        <td><%= link_to "Show", coin %></td>
+        <td><%= link_to "Edit", edit_coin_path(coin) %></td>
+        <td><%= link_to "delete", coin, method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
   
 </div>
 
-
+<%= link_to "New coins", new_coin_path %>

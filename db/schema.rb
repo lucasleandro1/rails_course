@@ -17,7 +17,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_26_182126) do
     t.string "url_image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "mining_type_id"
+    t.integer "mining_type_id", null: false
     t.index ["mining_type_id"], name: "index_coins_on_mining_type_id"
   end
 

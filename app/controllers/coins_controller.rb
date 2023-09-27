@@ -1,12 +1,12 @@
 class CoinsController < ApplicationController
-  layout "adm"
+  layout "adm" #seleciona o layout, caso não selecione nenhum, fica padrão
   before_action :set_coin, only: %i[ show edit update destroy ]
 
   # GET /coins or /coins.json
   def index
     @coins = Coin.all
   end
-
+  
   # GET /coins/1 or /coins/1.json
   def show
   end
