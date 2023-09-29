@@ -1,6 +1,9 @@
 <%= nomedoapp%>
 <h1>Welcome</h1>
+<p> O idioma usado nessa aplicação é: <strong><%= locale(I18n.locale)%></strong></p>
 <p><strong>Data: <%=Date.today%></strong></p>
 <%= render "menu" %>
 <p> você esta em um ambiente de <strong><%= ambiente_rails%></strong></p>
 <p> meu nome é <strong><%= @meu_nome%></strong></p>
+
+

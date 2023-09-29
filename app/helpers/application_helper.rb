@@ -14,4 +14,12 @@ module ApplicationHelper
             "Teste"
         end
     end
+
+    def locale(locale)
+        if I18n.locale == :en
+            "English"
+        else 
+            "Português-br"
+        end
+    end
 end
