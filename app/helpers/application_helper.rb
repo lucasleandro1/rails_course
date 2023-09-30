@@ -15,7 +15,7 @@ module ApplicationHelper
         end
     end
 
-    def locale(locale)
+    def locale
         if I18n.locale == :en
             "English"
         else 
