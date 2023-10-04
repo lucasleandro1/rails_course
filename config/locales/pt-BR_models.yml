@@ -1,4 +1,5 @@
 "pt-BR":
+  actual_locale: "Portugûes do Brasil"
   activerecord:
     models:
       coin:
