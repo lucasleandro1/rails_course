@@ -13,3 +13,6 @@
  *= require_tree .
  *= require_self
  */
+body {
+    background-color: <%= Rails.env.development? ? "yellow" : "red"%>;
+}
